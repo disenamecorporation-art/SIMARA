@@ -1,0 +1,6 @@
+{
+  "name": "SIMARA - Asociación Cooperativa",
+  "description": "Servicios Petroleros y de Construcción Obra Civil en Maturín, Monagas, Venezuela.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
