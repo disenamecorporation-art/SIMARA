@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, Cog, HardHat, Wrench, Users, ChevronDown, ChevronUp } from 'lucide-react';
-import { IMAGES, CONTACT_INFO } from '../constants/images';
+import { IMAGES, CONTACT_INFO, USER_PROJECT_PHOTOS } from '../constants/images';
 
 interface ServicesProps {
   setCurrentTab: (tab: string) => void;
@@ -13,21 +13,35 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
     {
       id: 'petroleros',
       title: 'Servicios Petroleros',
-      subtitle: 'Operación, mantenimiento y perforación',
-      desc: 'Ofrecemos soporte técnico integral para la industria de hidrocarburos, abarcando desde la perforación de pozos hasta el mantenimiento preventivo y correctivo de instalaciones de superficie, líneas de flujo y sistemas de bombeo.',
+      subtitle: 'Líneas de tuberías, tanques y soldadura',
+      desc: 'Especialistas en la construcción y mantenimiento de líneas de tuberías, fabricación de tanques petroleros y soldadura industrial general para la industria de hidrocarburos.',
       features: [
-        'Perforación y completamiento de pozos',
-        'Mantenimiento de balancines y equipos de extracción',
-        'Construcción y mantenimiento de líneas de flujo',
-        'Inspección técnica y pruebas no destructivas',
+        'Construcción y mantenimiento de líneas de tuberías y flujo',
+        'Fabricación de tanques petroleros y almacenamiento',
+        'Soldadura general especializada para el sector petrolero',
+        'Soporte técnico y mantenimiento industrial',
       ],
-      image: IMAGES.drillingRig,
+      image: USER_PROJECT_PHOTOS[0].url,
       icon: <Cog className="w-8 h-8 text-[#03633C]" />,
+    },
+    {
+      id: 'equipos',
+      title: 'Equipos y Herramientas',
+      subtitle: 'Alquiler especializado',
+      desc: 'Disponemos de alquiler de herramientas para pesca en pozos, así como equipos especializados de apoyo operacional como brazos hidráulicos y torres de iluminación.',
+      features: [
+        'Alquiler de herramientas para pesca en pozos',
+        'Alquiler de brazos hidráulicos (camiones grúa)',
+        'Alquiler de torres de iluminación para operaciones nocturnas',
+        'Equipos actualizados para máxima eficiencia en campo',
+      ],
+      image: USER_PROJECT_PHOTOS[10].url,
+      icon: <Wrench className="w-8 h-8 text-[#03633C]" />,
     },
     {
       id: 'construccion',
       title: 'Construcción y Obra Civil',
-      subtitle: 'Infraestructura y edificaciones industriales',
+      subtitle: 'Infraestructura industrial',
       desc: 'Desarrollamos proyectos de infraestructura civil e industrial con estricto apego a los planos de ingeniería, normas técnicas y estándares de seguridad para garantizar obras duraderas y funcionales.',
       features: [
         'Edificaciones industriales y campamentos',
@@ -35,22 +49,8 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
         'Vaciado de concreto estructural y fundaciones',
         'Montaje de estructuras metálicas',
       ],
-      image: IMAGES.projectConstruction,
+      image: USER_PROJECT_PHOTOS[4].url,
       icon: <HardHat className="w-8 h-8 text-[#03633C]" />,
-    },
-    {
-      id: 'equipos',
-      title: 'Equipos y Maquinaria',
-      subtitle: 'Alquiler y gestión de flota especializada',
-      desc: 'Disponemos de un parque moderno de maquinaria pesada, vehículos operativos y equipos especializados para respaldar cada fase de sus operaciones en campo.',
-      features: [
-        'Alquiler de grúas y camiones de carga',
-        'Maquinaria para movimiento de tierra',
-        'Generadores eléctricos y torres de iluminación',
-        'Mantenimiento mecánico preventivo en sitio',
-      ],
-      image: IMAGES.heavyMachinery,
-      icon: <Wrench className="w-8 h-8 text-[#03633C]" />,
     },
     {
       id: 'talento',
@@ -59,26 +59,26 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
       desc: 'Proveemos cuadrillas de profesionales, técnicos, soldadores certificados y operadores con amplia experiencia y certificaciones SSA vigentes para garantizar faenas seguras y eficientes.',
       features: [
         'Supervisores de seguridad industrial (SSA)',
-        'Soldadores calificados ASME / AWS',
-        'Operadores de maquinaria pesada',
-        'Personal de apoyo logístico y técnico',
+        'Soldadores calificados ASME / AWS para tuberías y tanques',
+        'Operadores de brazos hidráulicos y maquinaria',
+        'Personal técnico de apoyo',
       ],
-      image: IMAGES.safetyPersonnel,
+      image: USER_PROJECT_PHOTOS[5].url,
       icon: <Users className="w-8 h-8 text-[#03633C]" />,
     },
   ];
 
   const faqs = [
     {
-      q: '¿Cómo puedo solicitar una cotización para un servicio petrolero?',
+      q: '¿Ofrecen servicio de perforación de pozos?',
+      a: 'No. SIMARA Asociación Cooperativa no realiza perforación de pozos. Nos especializamos en líneas de tuberías, fabricación de tanques petroleros, soldadura industrial en el área petrolera, herramientas para pesca en pozos y alquiler de equipos como brazos hidráulicos y torres de iluminación.',
+    },
+    {
+      q: '¿Cómo puedo solicitar una cotización de alquiler de equipos o tanques?',
       a: 'Puede ponerse en contacto con nosotros a través de nuestro formulario en la pestaña Contacto, enviando un correo a Cooperativasimara@gmail.com o escribiéndonos directamente vía WhatsApp al 04147650642.',
     },
     {
-      q: '¿SIMARA cuenta con personal certificado para áreas operativas de PDVSA y operadores privados?',
-      a: 'Sí, todo nuestro personal posee inducciones SSA vigentes, carnets de certificación y amplia experiencia comprobada en campos petroleros y obras civiles en el Estado Monagas y la región oriental.',
-    },
-    {
-      q: '¿Cuál es el tiempo de respuesta para la evaluación de un proyecto?',
+      q: '¿Cuál es el tiempo de respuesta para la evaluación de un proyecto de tuberías o tanques?',
       a: 'Nuestro equipo técnico evalúa los requerimientos y emite una propuesta preliminar o cotización en un plazo no mayor a 24-48 horas hábiles.',
     },
     {
@@ -97,11 +97,11 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-[#5CE08A] text-xs font-bold uppercase tracking-widest block mb-3">
-            SOLUCIONES INTEGRALES
+            SOLUCIONES ESPECIALIZADAS
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold mb-6">Nuestros Servicios</h1>
           <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            Alta capacidad técnica, maquinaria especializada y talento humano comprometido con la seguridad y el éxito de sus operaciones.
+            Líneas de tuberías, fabricación de tanques petroleros, soldadura general, herramientas de pesca y alquiler de equipos con los más altos estándares.
           </p>
         </div>
       </section>

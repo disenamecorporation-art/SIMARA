@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Users, Target, Eye, Award, CheckCircle2, Building2 } from 'lucide-react';
-import { IMAGES, CONTACT_INFO } from '../constants/images';
+import { IMAGES, CONTACT_INFO, USER_PROJECT_PHOTOS } from '../constants/images';
 
 interface AboutProps {
   setCurrentTab: (tab: string) => void;
@@ -21,7 +21,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold mb-6">Sobre Nosotros</h1>
           <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            Comprometidos con la excelencia operativa, la seguridad y el desarrollo integral de la industria petrolera y la construcción civil en Venezuela.
+            Especialistas en líneas de tuberías, fabricación de tanques petroleros, soldadura general, pesca en pozos y alquiler de equipos en Venezuela.
           </p>
         </div>
       </section>
@@ -38,16 +38,16 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
                 Unidos por el trabajo y la calidad profesional
               </h2>
               <p className="text-gray-600 text-base leading-relaxed mb-6">
-                Fundada en Maturín, Estado Monagas, <strong>SIMARA Asociación Cooperativa</strong> nace con la convicción de consolidar un modelo asociativo sólido, capaz de responder a los más exigentes estándares del sector petrolero, gasífero y de obras civiles.
+                Fundada en Maturín, Estado Monagas, <strong>SIMARA Asociación Cooperativa</strong> se especializa en brindar soluciones técnicas de alta calidad para la industria petrolera, abarcando líneas de tuberías, fabricación de tanques, soldadura industrial, pesca en pozos y alquiler de equipos especializados como brazos hidráulicos y torres de iluminación.
               </p>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
                 Nuestros asociados son profesionales y técnicos con amplia trayectoria, unidos bajo principios de solidaridad, ayuda mutua, responsabilidad y compromiso inquebrantable con la seguridad industrial (SSA).
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  'Más de 200 asociados',
+                  'Equipo técnico especializado',
                   'Certificación SSA vigente',
-                  'Parque de maquinaria propio',
+                  'Equipos y maquinaria propia',
                   'Presencia en oriente venezolano',
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center space-x-3 bg-[#FBFBFB] p-4 rounded-2xl border border-gray-100">
@@ -60,7 +60,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
             <div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src={IMAGES.aboutWorkers}
+                  src={USER_PROJECT_PHOTOS[12].url}
                   alt="Equipo SIMARA"
                   className="w-full h-[500px] object-cover"
                 />
@@ -89,7 +89,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
               </div>
               <h3 className="text-xl font-bold text-[#044027] mb-3">Misión</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Proveer servicios integrales de alta calidad en perforación, mantenimiento petrolero y construcción civil, garantizando la seguridad, eficiencia y satisfacción de nuestros clientes bajo un modelo cooperativo justo.
+                Proveer servicios de líneas de tuberías, fabricación de tanques petroleros, soldadura general, herramientas para pesca en pozos y alquiler de equipos, garantizando la seguridad y satisfacción del cliente bajo un modelo cooperativo justo.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
               </div>
               <h3 className="text-xl font-bold text-[#044027] mb-3">Visión</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Ser la asociación cooperativa líder y referente en el sector energético y de obras civiles en Venezuela, reconocida por su innovación, capacidad técnica y compromiso con el desarrollo sostenible.
+                Ser la asociación cooperativa líder en servicios petroleros de tuberías, tanques y soldadura en Venezuela, reconocida por su capacidad técnica, cumplimiento y excelencia operativa.
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
               </div>
               <h3 className="text-xl font-bold text-[#044027] mb-3">Valores</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Seguridad absoluta, solidaridad cooperativa, transparencia en cada proceso, excelencia técnica y responsabilidad ambiental en todas nuestras faenas.
+                Seguridad absoluta, solidaridad cooperativa, transparencia en cada proceso, excelencia técnica y responsabilidad en todas nuestras faenas.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
             <div className="bg-[#F5F7F5] p-10 rounded-3xl border border-gray-200">
               <h3 className="text-2xl font-extrabold text-[#044027] mb-4">Modelo Cooperativo</h3>
               <p className="text-gray-600 text-base leading-relaxed mb-6">
-                Como asociación cooperativa, fomentamos el trabajo digno, la participación democrática y el beneficio mutuo. Cada asociado aporta su experiencia y recibe un trato equitativo, lo que se traduce en mayor motivación y excelencia en cada proyecto que ejecutamos.
+                Como asociación cooperativa, fomentamos el trabajo digno, la participación democrática y el beneficio mutuo. Cada asociado aporta su experiencia especializada en tanques, tuberías y soldadura, lo que garantiza el éxito en cada proyecto.
               </p>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-center space-x-2">
@@ -132,7 +132,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-[#03633C]" />
-                  <span>Capacitación continua y bienestar social</span>
+                  <span>Capacitación continua en soldadura y seguridad</span>
                 </li>
               </ul>
             </div>
@@ -140,7 +140,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
             <div className="bg-[#044027] text-white p-10 rounded-3xl shadow-xl">
               <h3 className="text-2xl font-extrabold text-white mb-4">Política SSA (Seguridad, Salud y Ambiente)</h3>
               <p className="text-gray-200 text-base leading-relaxed mb-6">
-                Para SIMARA, la seguridad no es negociable. Cumplimos rigurosamente con las normativas nacionales e internacionales de prevención de riesgos laborales, protección ambiental y salud ocupacional en instalaciones petroleras y de construcción.
+                Para SIMARA, la seguridad no es negociable. Cumplimos rigurosamente con las normativas nacionales e internacionales de prevención de riesgos laborales y protección ambiental.
               </p>
               <ul className="space-y-3 text-sm text-gray-200">
                 <li className="flex items-center space-x-2">

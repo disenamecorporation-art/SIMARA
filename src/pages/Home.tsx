@@ -36,56 +36,56 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
   const galleryItems = [
     {
       id: 1,
-      title: 'Perforación y Soporte de Pozos',
+      title: 'Líneas de Tuberías',
       category: 'Petroleros',
       image: USER_PROJECT_PHOTOS[0].url,
       colSpan: 'col-span-1 sm:col-span-2 row-span-2',
     },
     {
       id: 2,
-      title: 'Mantenimiento de Infraestructura Petrolera',
+      title: 'Fabricación de Tanques',
       category: 'Petroleros',
       image: USER_PROJECT_PHOTOS[1].url,
       colSpan: 'col-span-1',
     },
     {
       id: 3,
-      title: 'Alquiler y Operación de Maquinaria Pesada',
+      title: 'Brazos Hidráulicos y Equipos',
       category: 'Equipos',
       image: USER_PROJECT_PHOTOS[2].url,
       colSpan: 'col-span-1',
     },
     {
       id: 4,
-      title: 'Vaciado de Concreto en Obras Civiles',
+      title: 'Obra Civil',
       category: 'Construcción',
       image: USER_PROJECT_PHOTOS[3].url,
       colSpan: 'col-span-1 sm:col-span-2',
     },
     {
       id: 5,
-      title: 'Estructuras Metálicas y Tuberías',
-      category: 'Construcción',
+      title: 'Soldadura Industrial',
+      category: 'Petroleros',
       image: USER_PROJECT_PHOTOS[4].url,
       colSpan: 'col-span-1',
     },
     {
       id: 6,
-      title: 'Talento Humano Certificado con EPP',
-      category: 'Personal',
+      title: 'Torres de Iluminación',
+      category: 'Equipos',
       image: USER_PROJECT_PHOTOS[5].url,
       colSpan: 'col-span-1 sm:col-span-2',
     },
     {
       id: 7,
-      title: 'Soldadura y Líneas de Flujo',
+      title: 'Pesca en Pozos',
       category: 'Petroleros',
       image: USER_PROJECT_PHOTOS[6].url,
       colSpan: 'col-span-1',
     },
     {
       id: 8,
-      title: 'Parque de Equipos Especializados',
+      title: 'Parque de Equipos',
       category: 'Equipos',
       image: USER_PROJECT_PHOTOS[7].url,
       colSpan: 'col-span-1',
@@ -122,7 +122,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
 
             {/* Paragraph */}
             <p className="text-gray-300 text-base sm:text-lg lg:text-xl font-light mb-10 max-w-2xl leading-relaxed">
-              Somos una cooperativa comprometida con el desarrollo de la industria energética y la construcción, ofreciendo soluciones integrales, seguras y de alta calidad.
+              Especialistas en líneas de tuberías, fabricación de tanques petroleros, soldadura industrial, herramientas para pesca en pozos y alquiler de equipos especializados.
             </p>
 
             {/* Buttons */}
@@ -177,14 +177,14 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
             </div>
             <div>
               <h4 className="text-base font-extrabold text-[#044027] mb-1">Calidad Garantizada</h4>
-              <p className="text-gray-600 text-xs leading-relaxed">Obras civiles e infraestructura de alta durabilidad.</p>
+              <p className="text-gray-600 text-xs leading-relaxed">Fabricación de tanques y soldadura especializada.</p>
             </div>
           </div>
 
           <div className="flex items-center justify-between bg-[#F5F7F5] p-4 rounded-2xl border border-gray-200/60">
             <div>
               <span className="text-xs font-bold text-[#03633C] uppercase block">Asociación Cooperativa</span>
-              <span className="text-xs text-gray-600 font-medium">+200 Asociados activos</span>
+              <span className="text-xs text-gray-600 font-medium">Especialistas petroleros</span>
             </div>
             <button
               onClick={() => setCurrentTab('nosotros')}
@@ -205,22 +205,22 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
               {
                 icon: <Cog className="w-10 h-10 text-[#03633C]" />,
                 title: 'Servicios Petroleros',
-                desc: 'Operación, mantenimiento, perforación y soporte técnico para la industria energética.',
+                desc: 'Líneas de tuberías, fabricación de tanques petroleros y soldadura en general en el área.',
               },
               {
                 icon: <HardHat className="w-10 h-10 text-[#03633C]" />,
                 title: 'Construcción y Obra Civil',
-                desc: 'Desarrollo de proyectos de infraestructura, edificaciones y obras civiles.',
+                desc: 'Desarrollo de proyectos de infraestructura, edificaciones y obras civiles industriales.',
               },
               {
                 icon: <Wrench className="w-10 h-10 text-[#03633C]" />,
-                title: 'Equipos y Maquinaria',
-                desc: 'Alquiler y gestión de equipos especializados para cada necesidad del proyecto.',
+                title: 'Equipos y Herramientas',
+                desc: 'Alquiler de herramientas para pesca en pozos, brazos hidráulicos y torres de iluminación.',
               },
               {
                 icon: <Users className="w-10 h-10 text-[#03633C]" />,
                 title: 'Talento Humano',
-                desc: 'Personal calificado, capacitado y comprometido con la seguridad y la excelencia.',
+                desc: 'Personal técnico calificado y comprometido con la seguridad y la excelencia.',
               },
             ].map((s, idx) => (
               <div key={idx} className="px-6 py-4 flex flex-col justify-between group">
@@ -246,11 +246,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
         </div>
       </section>
 
-      {/* 3. SOBRE NOSOTROS (Using user WhatsApp photo) */}
+      {/* 3. SOBRE NOSOTROS */}
       <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Image with diagonal green accent */}
+            {/* Left Image */}
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-[#025A37] to-[#044027] rounded-3xl z-0 transform -rotate-6 shadow-xl flex items-center justify-center p-4">
                 <div className="w-full h-full border-2 border-white/30 rounded-2xl flex items-center justify-center">
@@ -278,7 +278,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
                 Una cooperativa que impulsa el desarrollo
               </h2>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8">
-                En SIMARA, trabajamos unidos para generar valor en cada proyecto. Nuestro compromiso es brindar servicios de alta calidad en el sector petrolero y de la construcción, con un enfoque en la seguridad, la sostenibilidad y el bienestar de nuestros asociados y clientes.
+                En SIMARA, nos especializamos en líneas de tuberías, fabricación de tanques petroleros, soldadura general en el área petrolera, herramientas para pesca en pozos y alquiler de equipos como brazos hidráulicos y torres de iluminación.
               </p>
               <button
                 onClick={() => setCurrentTab('nosotros')}
@@ -297,7 +297,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-gray-300">
             {[
-              { number: '+200', label: 'Asociados cooperativistas', icon: <Users className="w-8 h-8 text-[#03633C] mb-2" /> },
+              { number: 'Equipo', label: 'Especializado y certificado', icon: <Users className="w-8 h-8 text-[#03633C] mb-2" /> },
               { number: '100%', label: 'Compromiso con la seguridad', icon: <ShieldCheck className="w-8 h-8 text-[#03633C] mb-2" /> },
               { number: '+50', label: 'Proyectos ejecutados', icon: <Building2 className="w-8 h-8 text-[#03633C] mb-2" /> },
               { number: 'Sostenibilidad', label: 'en cada operación', icon: <Leaf className="w-8 h-8 text-[#03633C] mb-2" /> },
@@ -327,7 +327,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
                 Obras que generan progreso
               </h2>
               <p className="text-gray-600 text-base mb-8 leading-relaxed">
-                Desde la industria petrolera hasta la construcción civil, cada proyecto refleja nuestro compromiso con la calidad, la seguridad y el desarrollo sostenible.
+                Fabricación de tanques, líneas de tuberías y servicios especializados para la industria petrolera y civil.
               </p>
               <button
                 onClick={() => setCurrentTab('proyectos')}
@@ -374,12 +374,12 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
               Nuestra Experiencia en Acción
             </h2>
             <p className="text-gray-600 text-base sm:text-lg">
-              Explore el registro fotográfico de nuestras operaciones petroleras, maquinaria pesada y proyectos de construcción en el Estado Monagas y Venezuela.
+              Registro fotográfico de tanques petroleros, líneas de tuberías, soldadura industrial y equipos especializados.
             </p>
 
             {/* Filter Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
-              {['Todos', 'Petroleros', 'Construcción', 'Equipos', 'Personal'].map((cat) => (
+              {['Todos', 'Petroleros', 'Obra Civil', 'Infraestructura', 'Equipos'].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveGalleryTab(cat)}
@@ -436,12 +436,12 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
               },
               {
                 title: 'Personal Certificado',
-                desc: 'Asociados profesionales y técnicos altamente capacitados con amplia trayectoria en el sector energético.',
+                desc: 'Asociados profesionales y técnicos altamente capacitados en soldadura y tuberías.',
                 icon: <Users className="w-8 h-8 text-[#03633C]" />,
               },
               {
                 title: 'Equipos Modernos',
-                desc: 'Parque de maquinaria pesada y herramientas especializadas actualizadas para máxima eficiencia.',
+                desc: 'Brazos hidráulicos, torres de iluminación y herramientas de pesca en pozos actualizadas.',
                 icon: <Cog className="w-8 h-8 text-[#03633C]" />,
               },
               {
@@ -480,7 +480,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
         <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${IMAGES.heroSunsetRig})` }} />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
-            ¿Necesitas un servicio petrolero o una obra civil?
+            ¿Necesitas tanques petroleros, líneas de tuberías o alquiler de equipos?
           </h2>
           <p className="text-gray-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-light">
             Estamos listos para asociarnos con tu empresa y garantizar el éxito de tu próximo proyecto en Maturín y todo el oriente del país.
