@@ -96,8 +96,8 @@ export const Contact: React.FC = () => {
                       <MapPin className="w-6 h-6 text-[#5CE08A]" />
                     </div>
                     <div>
-                      <strong className="block text-sm font-semibold text-[#5CE08A]">Dirección Principal</strong>
-                      <span className="text-gray-200 text-sm leading-relaxed">{CONTACT_INFO.address}</span>
+                      <strong className="block text-sm font-semibold text-[#5CE08A]">Cobertura</strong>
+                      <span className="text-gray-200 text-sm leading-relaxed">A nivel nacional (Venezuela)</span>
                     </div>
                   </li>
 
@@ -148,20 +148,6 @@ export const Contact: React.FC = () => {
                     <span>Escribir por WhatsApp Directo</span>
                   </a>
                 </div>
-              </div>
-
-              {/* Google Maps Embed */}
-              <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200 h-72">
-                <iframe
-                  title="Ubicación SIMARA Maturín"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9!2d-63.18!3d9.74!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNDQnMjQuMCJOIDYzwrAxMCc0OC4wIlc!5e0!3m2!1ses!2sve!4v1600000000000!5m2!1ses!2sve"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
               </div>
             </div>
 

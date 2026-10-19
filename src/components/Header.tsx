@@ -53,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, setCurrentTab }) => 
             </a>
             <span className="flex items-center space-x-2 text-gray-300">
               <MapPin className="w-3.5 h-3.5 text-[#5CE08A]" />
-              <span>Maturín, Edo. Monagas</span>
+              <span>Cobertura Nacional (Venezuela)</span>
             </span>
           </div>
           <div className="flex items-center space-x-4">

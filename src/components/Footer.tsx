@@ -139,7 +139,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentTab }) => {
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-[#5CE08A] shrink-0 mt-1" />
-                <span>{CONTACT_INFO.address}</span>
+                <span>Cobertura a nivel nacional (Venezuela)</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-[#5CE08A] shrink-0" />

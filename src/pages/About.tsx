@@ -41,7 +41,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
                 Fundada en Maturín, Estado Monagas, <strong>SIMARA Asociación Cooperativa</strong> se especializa en brindar soluciones técnicas de alta calidad para la industria petrolera, abarcando líneas de tuberías, fabricación de tanques, soldadura industrial, pesca en pozos y alquiler de equipos especializados como brazos hidráulicos y torres de iluminación.
               </p>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                Nuestros asociados son profesionales y técnicos con amplia trayectoria, unidos bajo principios de solidaridad, ayuda mutua, responsabilidad y compromiso inquebrantable con la seguridad industrial (SSA).
+                Como asociación cooperativa, fomentamos el trabajo digno, la participación democrática y el beneficio mutuo. Cada miembro asociado aporta su experiencia especializada en las respectivas áreas de trabajo lo que garantiza el éxito en cada proyecto.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -89,7 +89,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
               </div>
               <h3 className="text-xl font-bold text-[#044027] mb-3">Misión</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Proveer servicios de líneas de tuberías, fabricación de tanques petroleros, soldadura general, herramientas para pesca en pozos y alquiler de equipos, garantizando la seguridad y satisfacción del cliente bajo un modelo cooperativo justo.
+                "Brindar soluciones integrales de ingeniería, construcción civil y servicios especializados para la industria petrolera y energética, garantizando altos estándares de calidad, seguridad industrial y responsabilidad ambiental. Tambien nos comprometemos a ejecutar proyectos de infraestructura y soporte operativo que impulsen el desarrollo sostenible y la eficiencia de nuestros clientes."
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
               </div>
               <h3 className="text-xl font-bold text-[#044027] mb-3">Visión</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Ser la asociación cooperativa líder en servicios petroleros de tuberías, tanques y soldadura en Venezuela, reconocida por su capacidad técnica, cumplimiento y excelencia operativa.
+                "Consolidarnos como el socio estratégico de mayor confianza y Liderar la transformación de la infraestructura petrolera y civil, siendo la primera opción para clientes que buscan excelencia técnica y desarrollo sostenible."
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
               </div>
               <h3 className="text-xl font-bold text-[#044027] mb-3">Valores</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Seguridad absoluta, solidaridad cooperativa, transparencia en cada proceso, excelencia técnica y responsabilidad en todas nuestras faenas.
+                Como asociación cooperativa, fomentamos el trabajo digno, la participación democrática y el beneficio mutuo. Cada miembro asociado aporta su experiencia especializada en las respectivas áreas de trabajo lo que garantiza el éxito en cada proyecto.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
             <div className="bg-[#F5F7F5] p-10 rounded-3xl border border-gray-200">
               <h3 className="text-2xl font-extrabold text-[#044027] mb-4">Modelo Cooperativo</h3>
               <p className="text-gray-600 text-base leading-relaxed mb-6">
-                Como asociación cooperativa, fomentamos el trabajo digno, la participación democrática y el beneficio mutuo. Cada asociado aporta su experiencia especializada en tanques, tuberías y soldadura, lo que garantiza el éxito en cada proyecto.
+                Como asociación cooperativa, fomentamos el trabajo digno, la participación democrática y el beneficio mutuo. Cada miembro asociado aporta su experiencia especializada en las respectivas áreas de trabajo lo que garantiza el éxito en cada proyecto.
               </p>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-center space-x-2">
@@ -161,7 +161,7 @@ export const About: React.FC<AboutProps> = ({ setCurrentTab }) => {
       <section className="py-20 bg-[#03633C] text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-6">¿Deseas asociarte o contratarnos?</h2>
-          <p className="text-gray-100 mb-8 text-base">Estamos ubicados en {CONTACT_INFO.address}. Contáctanos hoy mismo.</p>
+          <p className="text-gray-100 mb-8 text-base">Cobertura a nivel nacional en toda Venezuela. Contáctanos hoy mismo.</p>
           <button
             onClick={() => {
               setCurrentTab('contacto');

@@ -37,8 +37,23 @@ export const IMAGES = {
   contactoHero: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1920&auto=format&fit=crop",
 };
 
-// User-provided WhatsApp photos
+// User-provided WhatsApp photos (including new Construction Civil photos)
 export const USER_PROJECT_PHOTOS = [
+  // New Construction Civil photos
+  { id: 101, category: 'Obra Civil', url: 'https://i.postimg.cc/BbypF4Nh/Whats-App-Image-2026-10-18-at-10-11-00-(1).jpg' },
+  { id: 102, category: 'Obra Civil', url: 'https://i.postimg.cc/XqhL54xs/Whats-App-Image-2026-10-18-at-10-11-01.jpg' },
+  { id: 103, category: 'Obra Civil', url: 'https://i.postimg.cc/FzqpSNGp/Whats-App-Image-2026-10-18-at-10-11-01-(1).jpg' },
+  { id: 104, category: 'Obra Civil', url: 'https://i.postimg.cc/SR5d9kVG/Whats-App-Image-2026-10-18-at-10-11-02.jpg' },
+  { id: 105, category: 'Obra Civil', url: 'https://i.postimg.cc/yxWnWkht/Whats-App-Image-2026-10-18-at-10-11-02-(1).jpg' },
+  { id: 106, category: 'Obra Civil', url: 'https://i.postimg.cc/sx1K1vPL/Whats-App-Image-2026-10-18-at-10-11-02-(2).jpg' },
+  { id: 107, category: 'Obra Civil', url: 'https://i.postimg.cc/zv3p3VwM/Whats-App-Image-2026-10-18-at-10-11-03.jpg' },
+  { id: 108, category: 'Obra Civil', url: 'https://i.postimg.cc/yxWnWkhQ/Whats-App-Image-2026-10-18-at-10-11-05.jpg' },
+  { id: 109, category: 'Obra Civil', url: 'https://i.postimg.cc/63bfsBst/Whats-App-Image-2026-10-18-at-10-10-58.jpg' },
+  { id: 110, category: 'Obra Civil', url: 'https://i.postimg.cc/ZR5xDCQq/Whats-App-Image-2026-10-18-at-10-10-59.jpg' },
+  { id: 111, category: 'Obra Civil', url: 'https://i.postimg.cc/j534VRVT/Whats-App-Image-2026-10-18-at-10-10-59-(1).jpg' },
+  { id: 112, category: 'Obra Civil', url: 'https://i.postimg.cc/XJ1kMnM3/Whats-App-Image-2026-10-18-at-10-10-59-(2).jpg' },
+  { id: 113, category: 'Obra Civil', url: 'https://i.postimg.cc/NMjkP5nv/Whats-App-Image-2026-10-18-at-10-11-00.jpg' },
+  // Previous photos
   { id: 1, category: 'Petroleros', url: 'https://i.postimg.cc/RVWF5PGp/Whats-App-Image-2026-10-13-at-20-25-12.jpg' },
   { id: 2, category: 'Petroleros', url: 'https://i.postimg.cc/pXmTb0k0/Whats-App-Image-2026-10-13-at-20-25-14.jpg' },
   { id: 3, category: 'Petroleros', url: 'https://i.postimg.cc/NfKMqNbJ/Whats-App-Image-2026-10-13-at-20-25-16.jpg' },
@@ -62,6 +77,5 @@ export const CONTACT_INFO = {
   phone: "04147650642",
   phoneFormatted: "0414-7650642",
   whatsappUrl: "https://wa.me/584147650642",
-  address: "Urb. Altos de Tipuro C-15, Maturín, Edo. Monagas",
-  mapQuery: "Urb. Altos de Tipuro, Maturin, Monagas, Venezuela"
+  location: "Venezuela (Cobertura Nacional)"
 };
