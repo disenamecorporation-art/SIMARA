@@ -29,12 +29,12 @@ export const Projects: React.FC<ProjectsProps> = () => {
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold mb-6">Proyectos Realizados</h1>
           <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            Registro fotográfico oficial de nuestras operaciones y proyectos.
+            Identifica cada fotografía por su número para organizarlas según prefieras.
           </p>
         </div>
       </section>
 
-      {/* Pure Photo Gallery Grid for Projects */}
+      {/* Pure Photo Gallery Grid for Projects with numbered badges */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16">
@@ -54,18 +54,23 @@ export const Projects: React.FC<ProjectsProps> = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredPhotos.map((photo) => (
+            {filteredPhotos.map((photo, index) => (
               <div
                 key={photo.id}
                 onClick={() => setSelectedImageUrl(photo.url)}
-                className="group relative h-72 rounded-3xl overflow-hidden shadow-xl cursor-pointer bg-gray-900"
+                className="group relative h-72 rounded-3xl overflow-hidden shadow-xl cursor-pointer bg-gray-900 border-2 border-white/20"
               >
                 <img
                   src={photo.url}
-                  alt="Proyecto SIMARA"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  alt={`Proyecto SIMARA #${index + 1}`}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors" />
+                
+                {/* Numbered Badge */}
+                <div className="absolute top-3 left-3 bg-[#03633C] text-white font-extrabold text-sm px-3.5 py-1.5 rounded-full shadow-lg border border-white/30 z-10">
+                  #{index + 1} ({photo.category})
+                </div>
               </div>
             ))}
           </div>
