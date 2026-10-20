@@ -112,10 +112,10 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentTab }) => {
             <ul className="space-y-2.5">
               {[
                 'Servicios Petroleros',
-                'Construcción y Obra Civil',
-                'Alquiler de Maquinaria',
+                'Construcción Civil',
+                'Alquiler de Maquinaria y Equipos',
                 'Talento Humano Calificado',
-                'Perforación y Mantenimiento',
+                'Líneas de Tuberías y Tanques',
                 'Infraestructura Energética',
               ].map((service, idx) => (
                 <li key={idx}>

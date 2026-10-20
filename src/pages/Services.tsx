@@ -40,7 +40,7 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
     },
     {
       id: 'construccion',
-      title: 'Construcción y Obra Civil',
+      title: 'Construcción Civil',
       subtitle: 'Infraestructura industrial',
       desc: 'Desarrollamos proyectos de infraestructura civil e industrial con estricto apego a los planos de ingeniería, normas técnicas y estándares de seguridad para garantizar obras duraderas y funcionales.',
       features: [
@@ -49,7 +49,7 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
         'Vaciado de concreto estructural y fundaciones',
         'Montaje de estructuras metálicas',
       ],
-      image: USER_PROJECT_PHOTOS[4].url,
+      image: USER_PROJECT_PHOTOS[16].url,
       icon: <HardHat className="w-8 h-8 text-[#03633C]" />,
     },
     {
@@ -83,7 +83,7 @@ export const Services: React.FC<ServicesProps> = ({ setCurrentTab }) => {
     },
     {
       q: '¿Trabajan fuera del Estado Monagas?',
-      a: 'Sí, aunque nuestra sede principal está en Maturín, Edo. Monagas (Urb. Altos de Tipuro C-15), ejecutamos proyectos en todo el territorio nacional según los requerimientos del cliente.',
+      a: 'Sí, aunque nuestra sede principal está en Maturín, Edo. Monagas, ejecutamos proyectos en todo el territorio nacional según los requerimientos del cliente.',
     },
   ];
 

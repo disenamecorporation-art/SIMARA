@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Maximize2 } from 'lucide-react';
 import { IMAGES, USER_PROJECT_PHOTOS } from '../constants/images';
 import { ImageViewerModal } from '../components/ImageViewerModal';
 
@@ -7,69 +8,82 @@ interface ProjectsProps {
 }
 
 export const Projects: React.FC<ProjectsProps> = () => {
-  const [activeFilter, setActiveFilter] = useState('Todos');
-  const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null);
+  const [activeFilter, setActiveFilter] = useState<'Petroleros' | 'Construcción Civil'>('Petroleros');
+  const [selectedPhoto, setSelectedPhoto] = useState<{ url: string; category: string } | null>(null);
 
-  const filteredPhotos =
-    activeFilter === 'Todos'
-      ? USER_PROJECT_PHOTOS
-      : USER_PROJECT_PHOTOS.filter((p) => p.category === activeFilter);
+  const filteredPhotos = USER_PROJECT_PHOTOS.filter((p) => p.category === activeFilter);
 
   return (
     <div className="bg-white text-gray-800">
       {/* Hero interno */}
-      <section className="relative py-24 bg-[#044027] text-white overflow-hidden">
+      <section className="relative py-20 sm:py-24 bg-[#044027] text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${IMAGES.proyectosHero})` }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-[#5CE08A] text-xs font-bold uppercase tracking-widest block mb-3">
-            GALERÍA DE OBRAS Y PROYECTOS
+            GALERÍA DE OPERACIONES
           </span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold mb-6">Proyectos Realizados</h1>
+          <h1 className="text-4xl sm:text-6xl font-extrabold mb-4">Proyectos Ejecutados</h1>
           <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            Identifica cada fotografía por su número para organizarlas según prefieras.
+            Registro fotográfico de nuestras obras e intervenciones en servicios petroleros y construcción civil a nivel nacional.
           </p>
         </div>
       </section>
 
-      {/* Pure Photo Gallery Grid for Projects with numbered badges */}
-      <section className="py-24">
+      {/* Galería exclusiva: Únicamente Petroleros y Construcción Civil */}
+      <section className="py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16">
-            {['Todos', 'Petroleros', 'Obra Civil', 'Infraestructura', 'Equipos'].map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 ${
-                  activeFilter === filter
-                    ? 'bg-[#03633C] text-white shadow-lg shadow-[#03633C]/30 scale-105'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
+          
+          {/* Filter Tabs: Solo las dos secciones solicitadas */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12">
+            <button
+              onClick={() => setActiveFilter('Petroleros')}
+              className={`px-7 py-3 rounded-full text-sm font-bold transition-all duration-200 ${
+                activeFilter === 'Petroleros'
+                  ? 'bg-[#03633C] text-white shadow-xl shadow-[#03633C]/30 scale-105 ring-2 ring-[#5CE08A]'
+                  : 'bg-[#F5F7F5] text-gray-700 hover:bg-gray-200 border border-gray-200'
+              }`}
+            >
+              Petroleros
+            </button>
+
+            <button
+              onClick={() => setActiveFilter('Construcción Civil')}
+              className={`px-7 py-3 rounded-full text-sm font-bold transition-all duration-200 ${
+                activeFilter === 'Construcción Civil'
+                  ? 'bg-[#03633C] text-white shadow-xl shadow-[#03633C]/30 scale-105 ring-2 ring-[#5CE08A]'
+                  : 'bg-[#F5F7F5] text-gray-700 hover:bg-gray-200 border border-gray-200'
+              }`}
+            >
+              Construcción Civil
+            </button>
           </div>
 
+          {/* Grid de fotos puras sin numeraciones ni nombres */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredPhotos.map((photo, index) => (
+            {filteredPhotos.map((photo) => (
               <div
                 key={photo.id}
-                onClick={() => setSelectedImageUrl(photo.url)}
-                className="group relative h-72 rounded-3xl overflow-hidden shadow-xl cursor-pointer bg-gray-900 border-2 border-white/20"
+                onClick={() => setSelectedPhoto({
+                  url: photo.url,
+                  category: photo.category
+                })}
+                className="group relative h-72 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl cursor-pointer bg-gray-900 border border-gray-100 transition-all duration-300"
               >
                 <img
                   src={photo.url}
-                  alt={`Proyecto SIMARA #${index + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
+                  alt={`SIMARA ${photo.category}`}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors" />
                 
-                {/* Numbered Badge */}
-                <div className="absolute top-3 left-3 bg-[#03633C] text-white font-extrabold text-sm px-3.5 py-1.5 rounded-full shadow-lg border border-white/30 z-10">
-                  #{index + 1} ({photo.category})
+                {/* Overlay sutil al pasar el mouse con icono de ampliación */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 bg-white/90 p-3 rounded-full shadow-lg text-[#044027]">
+                    <Maximize2 className="w-5 h-5" />
+                  </div>
                 </div>
               </div>
             ))}
@@ -77,14 +91,13 @@ export const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </section>
 
-      {/* Project Detail Modal */}
-      {selectedImageUrl && (
+      {/* Modal visor de foto limpia */}
+      {selectedPhoto && (
         <ImageViewerModal
-          isOpen={!!selectedImageUrl}
-          imageUrl={selectedImageUrl}
-          title="Proyecto SIMARA"
-          category="Galería Oficial"
-          onClose={() => setSelectedImageUrl(null)}
+          isOpen={!!selectedPhoto}
+          imageUrl={selectedPhoto.url}
+          category={selectedPhoto.category}
+          onClose={() => setSelectedPhoto(null)}
         />
       )}
     </div>

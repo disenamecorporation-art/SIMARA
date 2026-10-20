@@ -254,9 +254,9 @@ export const Contact: React.FC = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 bg-white focus:outline-none focus:border-[#03633C] text-sm"
                     >
-                      <option value="Servicios Petroleros">Servicios Petroleros (Perforación / Mantenimiento)</option>
-                      <option value="Construcción y Obra Civil">Construcción y Obra Civil</option>
-                      <option value="Equipos y Maquinaria">Equipos y Maquinaria</option>
+                      <option value="Servicios Petroleros">Servicios Petroleros (Tuberías / Tanques / Soldadura)</option>
+                      <option value="Construcción Civil">Construcción Civil</option>
+                      <option value="Equipos y Maquinaria">Equipos y Maquinaria (Brazos hidráulicos / Torres de iluminación / Pesca)</option>
                       <option value="Talento Humano">Talento Humano Calificado</option>
                       <option value="Otro">Otro servicio</option>
                     </select>

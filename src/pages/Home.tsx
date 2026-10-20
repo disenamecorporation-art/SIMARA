@@ -26,76 +26,56 @@ interface HomeProps {
 }
 
 export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
-  const [activeGalleryTab, setActiveGalleryTab] = useState('Todos');
+  const [activeGalleryTab, setActiveGalleryTab] = useState<'Petroleros' | 'Construcción Civil'>('Petroleros');
   const [selectedImage, setSelectedImage] = useState<{
     url: string;
-    title: string;
     category: string;
   } | null>(null);
 
   const galleryItems = [
     {
       id: 1,
-      title: 'Líneas de Tuberías',
-      category: 'Petroleros',
+      category: 'Petroleros' as const,
       image: USER_PROJECT_PHOTOS[0].url,
-      colSpan: 'col-span-1 sm:col-span-2 row-span-2',
     },
     {
       id: 2,
-      title: 'Fabricación de Tanques',
-      category: 'Petroleros',
+      category: 'Petroleros' as const,
       image: USER_PROJECT_PHOTOS[1].url,
-      colSpan: 'col-span-1',
     },
     {
       id: 3,
-      title: 'Brazos Hidráulicos y Equipos',
-      category: 'Equipos',
-      image: USER_PROJECT_PHOTOS[2].url,
-      colSpan: 'col-span-1',
+      category: 'Construcción Civil' as const,
+      image: USER_PROJECT_PHOTOS[16].url,
     },
     {
       id: 4,
-      title: 'Obra Civil',
-      category: 'Construcción',
-      image: USER_PROJECT_PHOTOS[3].url,
-      colSpan: 'col-span-1 sm:col-span-2',
+      category: 'Petroleros' as const,
+      image: USER_PROJECT_PHOTOS[4].url,
     },
     {
       id: 5,
-      title: 'Soldadura Industrial',
-      category: 'Petroleros',
-      image: USER_PROJECT_PHOTOS[4].url,
-      colSpan: 'col-span-1',
+      category: 'Construcción Civil' as const,
+      image: USER_PROJECT_PHOTOS[17].url,
     },
     {
       id: 6,
-      title: 'Torres de Iluminación',
-      category: 'Equipos',
-      image: USER_PROJECT_PHOTOS[5].url,
-      colSpan: 'col-span-1 sm:col-span-2',
+      category: 'Construcción Civil' as const,
+      image: USER_PROJECT_PHOTOS[18].url,
     },
     {
       id: 7,
-      title: 'Pesca en Pozos',
-      category: 'Petroleros',
+      category: 'Petroleros' as const,
       image: USER_PROJECT_PHOTOS[6].url,
-      colSpan: 'col-span-1',
     },
     {
       id: 8,
-      title: 'Parque de Equipos',
-      category: 'Equipos',
-      image: USER_PROJECT_PHOTOS[7].url,
-      colSpan: 'col-span-1',
+      category: 'Construcción Civil' as const,
+      image: USER_PROJECT_PHOTOS[19].url,
     },
   ];
 
-  const filteredGallery =
-    activeGalleryTab === 'Todos'
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === activeGalleryTab);
+  const filteredGallery = galleryItems.filter((item) => item.category === activeGalleryTab);
 
   return (
     <div className="bg-white text-gray-800">
@@ -115,9 +95,9 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight mb-6">
               Servicios Petroleros
               <br />
-              y de Construcción
+              y de
               <br />
-              <span className="text-[#5CE08A]">Obra Civil</span>
+              <span className="text-[#5CE08A]">Construcción Civil</span>
             </h1>
 
             {/* Paragraph */}
@@ -209,7 +189,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
               },
               {
                 icon: <HardHat className="w-10 h-10 text-[#03633C]" />,
-                title: 'Construcción y Obra Civil',
+                title: 'Construcción Civil',
                 desc: 'Desarrollo de proyectos de infraestructura, edificaciones y obras civiles industriales.',
               },
               {
@@ -379,11 +359,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
 
             {/* Filter Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
-              {['Todos', 'Petroleros', 'Obra Civil', 'Infraestructura', 'Equipos'].map((cat) => (
+              {(['Petroleros', 'Construcción Civil'] as const).map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveGalleryTab(cat)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
+                  className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
                     activeGalleryTab === cat
                       ? 'bg-[#03633C] text-white shadow-lg shadow-[#03633C]/30 scale-105'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -396,19 +376,19 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
           </div>
 
           {/* Pure Photo Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredGallery.map((item) => (
               <div
                 key={item.id}
-                onClick={() => setSelectedImage({ url: item.image, title: item.title, category: item.category })}
-                className="group relative h-80 rounded-3xl overflow-hidden shadow-xl cursor-pointer bg-gray-900"
+                onClick={() => setSelectedImage({ url: item.image, category: item.category })}
+                className="group relative h-72 rounded-3xl overflow-hidden shadow-md hover:shadow-xl cursor-pointer bg-gray-900 border border-gray-100"
               >
                 <img
                   src={item.image}
-                  alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  alt={`SIMARA ${item.category}`}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </div>
             ))}
           </div>
@@ -431,7 +411,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
             {[
               {
                 title: 'Seguridad Primero',
-                desc: 'Estrictos protocolos SSA en cada faena petrolera y obra civil para proteger a nuestro personal y activos.',
+                desc: 'Estrictos protocolos SSA en cada faena petrolera y de construcción civil para proteger a nuestro personal y activos.',
                 icon: <ShieldCheck className="w-8 h-8 text-[#03633C]" />,
               },
               {
@@ -537,7 +517,6 @@ export const Home: React.FC<HomeProps> = ({ setCurrentTab }) => {
       <ImageViewerModal
         isOpen={!!selectedImage}
         imageUrl={selectedImage?.url || ''}
-        title={selectedImage?.title || ''}
         category={selectedImage?.category || ''}
         onClose={() => setSelectedImage(null)}
       />
